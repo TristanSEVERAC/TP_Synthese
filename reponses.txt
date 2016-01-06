@@ -1,1 +1,7 @@
 SEVERAC Tristan DASI 2
+
+
+Réponses :
+
+1.4 : - le cas ou la méthode getNext ne recoit en entrée que des "z"
+      - le cas ou on modifie la valeur attendue dans les tests unitaires
