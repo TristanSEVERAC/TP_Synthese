@@ -8,7 +8,12 @@ def getNext(password):
     'ba'
     >>> getNext('bc')
     'bd'
+    >>> getNext('zzzzz')
+    'Erreur, le mot de passe ne peut pas être : zzzzz'
     """
+    if password == 'zzzzz':
+            raise Exception('Erreur, le mot de passe ne peut pas être : zzzzz')
+        
     pwd = list(password)  #1 pwd est une variable qui récupère la valeur en entrée de password transformé en List: (abc) devient ['a', 'b', 'c']
     found = False
     i=len(pwd)-1
@@ -22,6 +27,7 @@ def getNext(password):
            if pwd[i] < 'z':
                pwd[i] = chr(ord(pwd[i])+1)
                found = True
+               
     
     return ''.join(pwd) #3 convertie toutes les valeurs de la variable pwd en une seule chaine: a,b,c devient abc
 
